@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--Icono redes sociales-->
+    <script src="https://kit.fontawesome.com/9001ab4b01.js" crossorigin="anonymous"></script>
+    <title>Python - Documentación</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header><i class="fa-brands fa-python"></i> Python - Documentación</header>
+        <ul>
+            <li><a href="#intro" class="nav-link">Introducción</a></li>
+            <li><a href="#datos" class="nav-link">Estructura de datos</a></li>
+            <li><a href="#flujo" class="nav-link">Control de Flujo</a></li>
+            <li><a href="#func" class="nav-link">Funciones y módulos</a></li>
+            <li><a href="#poo" class="nav-link">Programación orientada a objetos</a></li>
+            <li><a href="#arch" class="nav-link">Manejo de archivos / entrada y salida</a></li>
+            <li><a href="#biblio" class="nav-link">Bibliotecas y frameworks populares</a></li>
+        </ul>
+    </nav>
+    <!--Contenedor principal-->
+    <main id="main-doc">
+        <!--1º Sección-->
+        <section class="main-section" id="intro">
+            <header>Introducción</header>
+            <article>
+                <p>Python es un lenguaje de programación de alto nivel, interpretado y de propósito general, creado por
+                    Guido van Rossum y lanzado por primera vez en 1991. Se destaca por su simplicidad y legibilidad, lo
+                    que lo hace ideal tanto para principiantes como para desarrolladores experimentados.</p>
+                <p>Características principales de Python:</p>
+                <ul>
+                    <li><span class="bold">Sintaxis clara y legible: </span>Utiliza indentación para delimitar bloques
+                        de código, lo que fomenta un estilo de programación limpio y consistente.</li>
+                    <li><span class="bold">Tipado dinámico: </span>Las variables no necesitan ser declaradas con un tipo
+                        específico antes de usarlas.</li>
+                    <li><span class="bold">Interpretado: </span> El código se ejecuta línea por línea, lo que facilita
+                        la depuración y el desarrollo iterativo.</li>
+                    <li><span class="bold">Multiplataforma: </span>Funciona en diversos sistemas operativos como
+                        Windows, macOS y Linux.</li>
+                    <li><span class="bold">Multiparadigma: </span>Soporta programación orientada a objetos, programación
+                        imperativa y programación funcional.</li>
+                    <li><span class="bold">Extensa biblioteca estándar: </span> Incluye módulos y funciones para una
+                        amplia gama de tareas, desde procesamiento de texto hasta desarrollo web.</li>
+                    <li><span class="bold">Gran comunidad y ecosistema: </span>Cuenta con una comunidad activa y una
+                        gran cantidad de bibliotecas de terceros disponibles a través de PyPI (Python Package Index).
+                    </li>
+                    <li><span class="bold">Versátil: </span>Se utiliza en diversos campos como desarrollo web, ciencia
+                        de datos, inteligencia artificial, automatización, scripting y más.</li>
+                </ul>
+                <p>Python se ha convertido en uno de los lenguajes de programación más populares debido a su facilidad
+                    de uso, versatilidad y potencia, lo que lo hace adecuado para una amplia gama de aplicaciones y
+                    proyectos.</p>
+            </article>
+        </section>
+        <!--2º Sección-->
+        <section class="main-section" id="datos">
+            <header>Estructura de datos</header>
+            <ol>
+                <li>
+                    <span class="bold">Listas:</span>
+                    <ul>
+                        <li>Colección ordenada y mutable de elementos.</li>
+                        <li>Pueden contener diferentes tipos de datos.</li>
+                        <li>Se definen con corchetes []. Ejemplo:</li>
+                        <code>mi_lista = [1, 2, 3, "python", True]</code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Tuplas:</span>
+                    <ul>
+                        <li>Colección ordenada e inmutable de elementos.</li>
+                        <li>Similar a las listas, pero no se pueden modificar después de crearse.</li>
+                        <li>Se definen con paréntesis (). Ejemplo:</li>
+                        <code>mi_tupla = (1, 2, 3, "python", True)</code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Diccionarios:</span>
+                    <ul>
+                        <li>Colección no ordenada de pares clave-valor.</li>
+                        <li>Las claves deben ser únicas e inmutables.</li>
+                        <li>Se definen con llaves {}.Ejemplo:</li>
+                        <code>mi_diccionario = {"nombre": "Ana", "edad": 28, "ciudad": "Madrid"}</code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Conjuntos:</span>
+                    <ul>
+                        <li>Colección no ordenada de elementos únicos.</li>
+                        <li>Útiles para eliminar duplicados y realizar operaciones de conjunto.</li>
+                        <li>Se definen con llaves {} o la función set(). Ejemplo:</li>
+                        <code>mi_conjunto = {1, 2, 3, 4, 5}</code>
+                    </ul>
+                </li>
+                <p>Cada una de estas estructuras de datos tiene sus propias características y métodos asociados, lo que
+                    las hace adecuadas para diferentes tipos de tareas en programación.</p>
+            </ol>
+        </section>
+        <!--3º Sección-->
+        <section class="main-section" id="flujo">
+            <header>Control de Flujo</header>
+            <ol>
+                <li><span class="bold">Condicionales: </span>Permiten ejecutar diferentes bloques de código según se
+                    cumplan ciertas condiciones. Ejemplo:
+                </li>
+                <pre><code>
+                    edad = 18
+                    if edad >= 18:
+                        print("Eres mayor de edad")
+                    elif edad >= 13:
+                        print("Eres un adolescente")
+                    else:
+                        print("Eres un niño")
+                </code></pre>
+                <li><span class="bold">Bucles: </span>
+                    <ol>
+                        <li><span class="bold">For: </span>Se usa para iterar sobre una secuencia (lista, tupla,
+                            diccionario, conjunto o cadena). Ejemplo:</li>
+                        <code>
+                            for i in range(5):
+                            print(f"Número: {i}")
+                        </code>
+                        <li><span class="bold">While: </span>Ejecuta un bloque de código mientras una condición sea
+                            verdadera. Ejemplo:</li>
+                        <code>
+                            contador = 0
+                            while contador < 5:
+                                print(f"Contador: {contador}")
+                                contador += 1
+                        </code>
+                    </ol>
+                </li>
+                <li><span class="bold">Manejo de excepciones: </span>Permite manejar errores y excepciones que puedan
+                    ocurrir durante la ejecución del programa. Ejemplo:
+                </li>
+                <code>
+                    try:
+                        resultado = 10 / 0
+                    except ZeroDivisionError:
+                        print("Error: División por cero")
+                    finally:
+                        print("Este bloque siempre se ejecuta")
+                </code>
+                <li><span class="bold">Declaraciones de control adicionales: </span>
+                    <ol>
+                        <li><span class="bold">Break: </span>Sale del bucle actual.</li>
+                        <li><span class="bold">Continue: </span>Salta a la siguiente iteración del bucle.</li>
+                        <li><span class="bold">Pass: </span>No hace nada, se usa como marcador de posición.</li>
+                        <p>Ejemplo: </p>
+                        <code>
+                            for i in range(10):
+                                if i == 3:
+                                    continue
+                                if i == 8:
+                                    break
+                                print(i)
+                        </code>
+                    </ol>
+                </li>
+                <p>Estos elementos de control de flujo son fundamentales en Python y permiten crear programas más
+                    complejos y flexibles, controlando la ejecución del código según las condiciones y necesidades
+                    específicas.</p>
+            </ol>
+        </section>
+        <!--4º Sección-->
+        <section class="main-section" id="func">
+            <header>Funciones y módulos</header>
+            <ol>
+                <li>
+                    <span class="bold">Funciones:</span>
+                    <ul>
+                        <li>Bloques de código reutilizables que realizan una tarea específica.</li>
+                        <li>Se definen con la palabra clave 'def'.</li>
+                        <li>Pueden tener parámetros de entrada y devolver valores.</li>
+                        <li>Tienen un ámbito local para las variables definidas dentro de ellas.</li>
+                        <li>Ejemplo de función:</li>
+                        <code>
+                            def saludar(nombre):
+                                return f"Hola, {nombre}!"
+
+                            mensaje = saludar("Ana")
+                            print(mensaje)  # Imprime: Hola, Ana!
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Módulos:</span>
+                    <ul>
+                        <li>Archivos que contienen código Python, incluyendo funciones, clases y variables.</li>
+                        <li>Se importan usando la palabra clave 'import'.</li>
+                        <li>Pueden ser módulos de la biblioteca estándar, de terceros o propios.</li>
+                        <li>Ayudan a mantener el código organizado y modular.</li>
+                        <li>Ejemplo de uso de módulos:</li>
+                        <code>
+                            import math
+
+                            radio = 5
+                            area = math.pi * radio ** 2
+                            print(f"El área del círculo es: {area}")
+
+                            from random import randint
+
+                            numero_aleatorio = randint(1, 10)
+                            print(f"Número aleatorio: {numero_aleatorio}")
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Beneficios de usar funciones y módulos:</span>
+                    <ul>
+                        <li>Reutilización de código</li>
+                        <li>Mejor organización y estructura del programa</li>
+                        <li>Facilidad de mantenimiento y depuración</li>
+                        <li>Posibilidad de compartir código entre diferentes proyectos</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <!--5º Sección-->
+        <section class="main-section" id="poo">
+            <header>Programación orientada a objetos</header>
+            <ol>
+                <li>
+                    <span class="bold">Clases:</span>
+                    <ul>
+                        <li>Plantillas para crear objetos que encapsulan datos y comportamientos.</li>
+                        <li>Se definen con la palabra clave 'class'.</li>
+                        <li>Contienen atributos (variables) y métodos (funciones).</li>
+                        <li>El método __init__ se usa para inicializar objetos.</li>
+                        <li>Ejemplo de clase:</li>
+                        <code>
+                            class Perro:
+                                def __init__(self, nombre, edad):
+                                    self.nombre = nombre
+                                    self.edad = edad
+                            
+                                def ladrar(self):
+                                    return f"{self.nombre} dice: ¡Guau!"
+                            
+                            mi_perro = Perro("Firulais", 3)
+                            print(mi_perro.ladrar())  # Imprime: Firulais dice: ¡Guau!
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Herencia:</span>
+                    <ul>
+                        <li>Permite crear nuevas clases basadas en clases existentes.</li>
+                        <li>La clase hija hereda atributos y métodos de la clase padre.</li>
+                        <li>Facilita la reutilización de código y la creación de jerarquías.</li>
+                        <li>Ejemplo de herencia:</li>
+                        <code>
+                            class Animal:
+                                def __init__(self, nombre):
+                                    self.nombre = nombre
+                            
+                            class Perro(Animal):
+                                def ladrar(self):
+                                    return f"{self.nombre} dice: ¡Guau!"
+                            
+                            mi_perro = Perro("Firulais")
+                            print(mi_perro.ladrar())  # Imprime: Firulais dice: ¡Guau!
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Polimorfismo:</span>
+                    <ul>
+                        <li>Permite que objetos de diferentes clases respondan al mismo método.</li>
+                        <li>Facilita el uso de una interfaz común para diferentes tipos de objetos.</li>
+                        <li>Se implementa a través de herencia y métodos con el mismo nombre.</li>
+                        <li>Ejemplo de polimorfismo:</li>
+                        <code>
+                            class Gato(Animal):
+                                def hacer_sonido(self):
+                                    return f"{self.nombre} dice: ¡Miau!"
+                            
+                            class Perro(Animal):
+                                def hacer_sonido(self):
+                                    return f"{self.nombre} dice: ¡Guau!"
+                            
+                            def animal_sonido(animal):
+                                print(animal.hacer_sonido())
+                            
+                            gato = Gato("Michi")
+                            perro = Perro("Firulais")
+                            
+                            animal_sonido(gato)   # Imprime: Michi dice: ¡Miau!
+                            animal_sonido(perro)  # Imprime: Firulais dice: ¡Guau!
+                        </code>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <!--6º Sección-->
+        <section class="main-section" id="arch">
+            <header>Manejo de archivos / entrada y salida</header>
+            <ol>
+                <li>
+                    <span class="bold">Apertura y cierre de archivos:</span>
+                    <ul>
+                        <li>Se usa la función 'open()' para abrir archivos.</li>
+                        <li>Es importante cerrar los archivos después de usarlos con 'close()'.</li>
+                        <li>Se recomienda usar la estructura 'with' para manejar archivos de forma segura.</li>
+                        <li>Ejemplo de apertura y cierre de archivo:</li>
+                        <code>
+                            with open('archivo.txt', 'r') as archivo:
+                                contenido = archivo.read()
+                            print(contenido)
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Lectura de archivos:</span>
+                    <ul>
+                        <li>Método 'read()': Lee todo el contenido del archivo.</li>
+                        <li>Método 'readline()': Lee una línea a la vez.</li>
+                        <li>Método 'readlines()': Lee todas las líneas y las devuelve como una lista.</li>
+                        <li>Ejemplo de lectura de archivo:</li>
+                        <code>
+                            with open('archivo.txt', 'r') as archivo:
+                                for linea in archivo:
+                                    print(linea.strip())
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Escritura en archivos:</span>
+                    <ul>
+                        <li>Modo 'w': Sobrescribe el archivo si existe, o crea uno nuevo.</li>
+                        <li>Modo 'a': Añade contenido al final del archivo.</li>
+                        <li>Método 'write()': Escribe una cadena en el archivo.</li>
+                        <li>Ejemplo de escritura en archivo:</li>
+                        <code>
+                            with open('nuevo_archivo.txt', 'w') as archivo:
+                                archivo.write("Hola, mundo!\n")
+                                archivo.write("Esta es una nueva línea.")
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Entrada/salida estándar:</span>
+                    <ul>
+                        <li>Función 'input()': Lee entrada del usuario desde la consola.</li>
+                        <li>Función 'print()': Muestra salida en la consola.</li>
+                        <li>Ejemplo de entrada/salida estándar:</li>
+                        <code>
+                            nombre = input("Ingresa tu nombre: ")
+                            print(f"Hola, {nombre}!")
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Manejo de excepciones en archivos:</span>
+                    <ul>
+                        <li>Es importante manejar posibles errores al trabajar con archivos.</li>
+                        <li>Se usan bloques try-except para capturar y manejar excepciones.</li>
+                        <li>Ejemplo de manejo de excepciones:</li>
+                        <code>
+                            try:
+                                with open('archivo_inexistente.txt', 'r') as archivo:
+                                    contenido = archivo.read()
+                            except FileNotFoundError:
+                                print("El archivo no existe.")
+                            except IOError:
+                                print("Error de entrada/salida al leer el archivo.")
+                        </code>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <!--7º Sección-->
+        <section class="main-section" id="biblio">
+            <header>Bibliotecas y frameworks populares</header>
+            <ol>
+                <li>
+                    <span class="bold">NumPy:</span>
+                    <ul>
+                        <li>Biblioteca fundamental para computación científica en Python.</li>
+                        <li>Proporciona soporte para grandes arrays y matrices multidimensionales.</li>
+                        <li>Incluye una amplia colección de funciones matemáticas de alto nivel.</li>
+                        <li>Ejemplo de uso de NumPy:</li>
+                        <code>
+                            import numpy as np
+
+                            # Crear un array
+                            arr = np.array([1, 2, 3, 4, 5])
+
+                            # Operaciones vectorizadas
+                            print(arr * 2)  # [2 4 6 8 10]
+
+                            # Funciones matemáticas
+                            print(np.mean(arr))  # 3.0
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Pandas:</span>
+                    <ul>
+                        <li>Biblioteca para manipulación y análisis de datos estructurados.</li>
+                        <li>Ofrece estructuras de datos como DataFrame y Series.</li>
+                        <li>Proporciona herramientas para leer/escribir datos en varios formatos.</li>
+                        <li>Ejemplo de uso de Pandas:</li>
+                        <code>
+                            import pandas as pd
+
+                            # Crear un DataFrame
+                            df = pd.DataFrame({
+                                'Nombre': ['Ana', 'Juan', 'María'],
+                                'Edad': [25, 30, 28]
+                            })
+
+                            # Operaciones básicas
+                            print(df['Edad'].mean())  # 27.666666666666668
+
+                            # Filtrar datos
+                            print(df[df['Edad'] > 27])
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Django:</span>
+                    <ul>
+                        <li>Framework de alto nivel para desarrollo web rápido y limpio.</li>
+                        <li>Sigue el patrón de diseño Modelo-Vista-Controlador (MVC).</li>
+                        <li>Incluye un ORM para interactuar con bases de datos.</li>
+                        <li>Ejemplo básico de una vista en Django:</li>
+                        <code>
+                            # views.py
+                            from django.http import HttpResponse
+
+                            def hola_mundo(request):
+                                return HttpResponse("Hola, mundo!")
+
+                            # urls.py
+                            from django.urls import path
+                            from . import views
+
+                            urlpatterns = [
+                                path('hola/', views.hola_mundo, name='hola_mundo'),
+                            ]
+                        </code>
+                    </ul>
+                </li>
+                <li>
+                    <span class="bold">Flask:</span>
+                    <ul>
+                        <li>Microframework ligero para desarrollo web.</li>
+                        <li>Fácil de usar y flexible, ideal para aplicaciones pequeñas a medianas.</li>
+                        <li>Altamente extensible con numerosas extensiones disponibles.</li>
+                        <li>Ejemplo básico de una aplicación Flask:</li>
+                        <code>
+                            from flask import Flask
+
+                            app = Flask(__name__)
+
+                            @app.route('/')
+                            def hola_mundo():
+                                return '¡Hola, mundo!'
+
+                            if __name__ == '__main__':
+                                app.run(debug=True)
+                        </code>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <p id="last">Proyecto personal y educativo realizado por <a href="https://www.linkedin.com/in/ezequiel-oliver/"
+                target="_blank">Ezequiel Oliver</a></p>
+    </main>
+</body>
+
+</html>
